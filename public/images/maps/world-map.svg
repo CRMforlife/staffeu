@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg baseProfile="full" height="800px" version="1.1" width="1920px" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><linearGradient id="bgGradientLabeled" x1="0" x2="1" y1="0" y2="0"><stop offset="0%" stop-color="#5E0079" /><stop offset="50%" stop-color="#F5A5C5" /><stop offset="100%" stop-color="#F75D0D" /></linearGradient><style type="text/css"><![CDATA[
+    .country-circle {
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .country-circle:hover {
+        fill: #F28C00;
+        r: 26;
+    }
+    .country-label {
+        font-family: 'Arial', sans-serif;
+        font-size: 20px;
+        fill: white;
+        text-anchor: middle;
+    }
+]]></style></defs><rect fill="url(#bgGradientLabeled)" height="800px" width="1920px" x="0" y="0" /><circle class="country-circle" cx="400" cy="300" fill="#8E44AD" r="20" /><text class="country-label" x="400" y="270">North America</text><circle class="country-circle" cx="850" cy="250" fill="#8E44AD" r="20" /><text class="country-label" x="850" y="220">Europe</text><circle class="country-circle" cx="1300" cy="300" fill="#8E44AD" r="20" /><text class="country-label" x="1300" y="270">Asia</text><circle class="country-circle" cx="1450" cy="600" fill="#8E44AD" r="20" /><text class="country-label" x="1450" y="570">Southeast Asia</text><circle class="country-circle" cx="600" cy="650" fill="#8E44AD" r="20" /><text class="country-label" x="600" y="620">South America</text><circle class="country-circle" cx="1700" cy="700" fill="#8E44AD" r="20" /><text class="country-label" x="1700" y="670">Australia</text></svg>

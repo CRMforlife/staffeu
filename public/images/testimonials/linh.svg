@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skinTone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4d03f;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#e5c132;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="uniform" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" fill="#ffffff"/>
+  
+  <!-- Uniform -->
+  <path d="M60 120 L100 110 L140 120 L150 200 L50 200 Z" fill="url(#uniform)"/>
+  
+  <!-- Neck -->
+  <path d="M85 100 C85 120 115 120 115 100" fill="url(#skinTone)"/>
+  
+  <!-- Face -->
+  <circle cx="100" cy="70" r="40" fill="url(#skinTone)"/>
+  
+  <!-- Hair -->
+  <path d="M60 70 C60 40 140 40 140 70 C140 85 115 95 100 95 C85 95 60 85 60 70" fill="url(#hair)"/>
+  <path d="M140 70 C140 55 125 45 100 45 C75 45 60 55 60 70" fill="url(#hair)"/>
+  
+  <!-- Eyes -->
+  <path d="M82 65 C85 65 88 65 91 65" stroke="#2d1810" stroke-width="2" fill="none"/>
+  <path d="M109 65 C112 65 115 65 118 65" stroke="#2d1810" stroke-width="2" fill="none"/>
+  
+  <!-- Eyebrows -->
+  <path d="M80 58 C85 56 90 56 95 58" stroke="#000000" stroke-width="2" fill="none"/>
+  <path d="M105 58 C110 56 115 56 120 58" stroke="#000000" stroke-width="2" fill="none"/>
+  
+  <!-- Nose -->
+  <path d="M97 65 L100 75 L103 65" stroke="#d4b36b" stroke-width="1" fill="none"/>
+  
+  <!-- Mouth -->
+  <path d="M90 85 C95 88 105 88 110 85" stroke="#c17f59" stroke-width="2" fill="none"/>
+  
+  <!-- Name Tag -->
+  <rect x="70" y="130" width="60" height="20" rx="10" fill="#7c3aed" opacity="0.1"/>
+  <text x="100" y="144" text-anchor="middle" font-family="Arial" font-size="12" fill="#7c3aed">Linh T.</text>
+</svg> 

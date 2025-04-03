@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="badge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Badge Background -->
+  <circle cx="100" cy="100" r="90" fill="url(#badge)" stroke="#7c3aed" stroke-width="2"/>
+  
+  <!-- Award Text -->
+  <text x="100" y="90" font-family="Arial" font-size="16" fill="#7c3aed" text-anchor="middle">EXCELLENCE</text>
+  <text x="100" y="110" font-family="Arial" font-size="14" fill="#7c3aed" text-anchor="middle">AWARD 2024</text>
+  
+  <!-- Stars -->
+  <path d="M100 40 L105 50 L115 52 L108 60 L110 70 L100 65 L90 70 L92 60 L85 52 L95 50 Z" fill="#7c3aed"/>
+</svg> 

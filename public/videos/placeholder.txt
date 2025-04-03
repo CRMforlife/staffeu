@@ -1,0 +1,15 @@
+Video testimonials should be placed in this directory.
+Recommended format: MP4
+Recommended dimensions: 1280x720
+Maximum file size: 10MB
+
+Expected video files:
+1. maria-testimonial.mp4
+2. linh-testimonial.mp4
+3. raj-testimonial.mp4
+
+Each video should be:
+- 30-60 seconds in length
+- Include subtitles
+- Have good audio quality
+- Be properly compressed 

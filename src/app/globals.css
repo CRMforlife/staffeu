@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 245, 245, 245;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+/* Navigation Styles */
+.nav-scrolled {
+  background: linear-gradient(135deg, rgba(94, 0, 121, 0.95) 0%, rgba(245, 165, 197, 0.95) 50%, rgba(247, 93, 13, 0.95) 100%);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.nav-transparent {
+  background: linear-gradient(135deg, rgba(94, 0, 121, 0.8) 0%, rgba(245, 165, 197, 0.8) 50%, rgba(247, 93, 13, 0.8) 100%);
+}
+
+/* Navigation Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-in-out forwards;
+}
+
+/* Custom gradient for hero section */
+.hero-gradient {
+  background: linear-gradient(135deg, #5E0079 0%, #F5A5C5 50%, #F75D0D 100%);
+  position: relative;
+}
+
+.hero-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1), transparent);
+  z-index: 1;
+}
+
+/* Kinetic Typography and Micro-Interactions */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 60s linear infinite;
+}
+
+/* Globe Animation */
+.globe {
+  position: relative;
+  transform-style: preserve-3d;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
+}
+
+.globe-pin {
+  position: absolute;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.globe-pin::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background-color: currentColor;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Hover effects for interactive elements */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom utility classes */
+@layer components {
+  /* Typography */
+  .heading-1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight;
+  }
+  
+  .heading-2 {
+    @apply text-3xl md:text-4xl font-extrabold tracking-tight;
+  }
+  
+  .heading-3 {
+    @apply text-2xl md:text-3xl font-bold tracking-tight;
+  }
+  
+  .body-text {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+  
+  .small-text {
+    @apply text-sm md:text-base;
+  }
+  
+  /* Buttons */
+  .primary-button {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-semibold rounded-md text-white bg-accent-purple hover:bg-accent-purple/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-purple transition-all duration-300;
+  }
+  
+  .secondary-button {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-accent-purple text-base font-semibold rounded-md text-accent-purple bg-white hover:bg-accent-purple/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-purple transition-all duration-300;
+  }
+  
+  /* Links */
+  .link-underline {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent-purple after:transition-all after:duration-300 hover:after:w-full;
+  }
+  
+  /* Cards */
+  .card-3d {
+    @apply transform transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+  
+  /* Bento Grid Layout */
+  .bento-grid {
+    @apply grid grid-cols-12 gap-6;
+  }
+  
+  .bento-item {
+    @apply transition-all duration-300;
+  }
+  
+  /* Full-Screen Headers */
+  .full-screen-header {
+    @apply min-h-screen flex items-center justify-center relative overflow-hidden;
+  }
+  
+  /* Strategic White Space */
+  .whitespace-section {
+    @apply py-16 md:py-24;
+  }
+  
+  .whitespace-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Animations */
+  .animate-fadeInUp {
+    @apply opacity-0 translate-y-4 animate-[fadeInUp_0.6s_ease-out_forwards];
+  }
+  
+  .animate-spin-slow {
+    @apply animate-[spin_20s_linear_infinite];
+  }
+  
+  .animate-pulse {
+    @apply animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite];
+  }
+  
+  /* Search Input */
+  .search-input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-purple focus:border-transparent transition-all duration-300;
+  }
+}
